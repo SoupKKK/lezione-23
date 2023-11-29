@@ -1,0 +1,94 @@
+@import 'general/color';
+@import 'general/font';
+@import 'general/spacings';
+@import 'general/button';
+@import 'general/mixings/mixing';
+@import 'general/animations/animations';
+
+
+
+header, main{
+    background-color: $bg1;
+    color: $textColor;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    
+    .logo {
+      img {
+        width: 100px;
+        height: auto;
+      }
+    }
+  
+    .links {
+      display: flex;
+  
+      li {
+        margin-left: 20px;
+        a {
+          text-decoration: none;
+          color: $textColor;
+          padding: 30%;
+          &:hover{
+            background-color: purple;
+          }
+        }
+      }
+    }
+  }
+
+article{
+    display: flex;
+    @include MarginPadding;
+    margin-top: 0px;
+        h1{
+            @include h1Text;
+            
+        }
+        img{
+            @include floating(30%, 10px);
+            @include fade-in(2s, 70px);
+            margin-left: 50px;
+            width: 30%;
+            position: relative;
+            top: 100px
+        }
+        button{
+            @include buttons;
+            @include animation(1s, 1.2);
+        }
+        div button:nth-child(1){
+            background-color: $btn1;
+        }
+        div button:nth-child(2){
+            background-color: $btn2;
+        }
+        div button:nth-child(3){
+            background-color: $btn3;
+        }
+       
+}
+
+
+
+aside .grid-container {
+    @include MarginPadding;
+    @include grid(4);
+  }
+
+  .grid-item {
+    @include fade-in(2s, 30px, 3s);
+    margin-top: 70px;
+    margin-left: 15px;
+    img {
+      @include floating;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  

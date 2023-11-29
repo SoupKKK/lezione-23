@@ -1,0 +1,125 @@
+header, main {
+  background-color: #640fc5;
+  color: #f4f4f4;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+nav .logo img {
+  width: 100px;
+  height: auto;
+}
+nav .links {
+  display: flex;
+}
+nav .links li {
+  margin-left: 20px;
+}
+nav .links li a {
+  text-decoration: none;
+  color: #f4f4f4;
+  padding: 30%;
+}
+nav .links li a:hover {
+  background-color: purple;
+}
+
+article {
+  display: flex;
+  padding: 1%;
+  margin: 20px;
+  margin-top: 0px;
+}
+article h1 {
+  font-size: 150%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+article img {
+  border-radius: 30%;
+  border: 10px solid orange;
+  box-shadow: 5px 5px 10px 2px #333333;
+  opacity: 0;
+  transform: translateY(70px);
+  animation: fadeInAnimation 2s ease-in-out forwards;
+  animation-delay: 0s;
+  visibility: hidden;
+  margin-left: 50px;
+  width: 30%;
+  position: relative;
+  top: 100px;
+}
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+article button {
+  margin: 15px;
+  border-radius: 20%;
+  padding: 2%;
+  transition: transform 1s;
+}
+article button:hover {
+  transform: scale(1.2);
+}
+article div button:nth-child(1) {
+  background-color: #0e6cff;
+}
+article div button:nth-child(2) {
+  background-color: #ff8700;
+}
+article div button:nth-child(3) {
+  background-color: #4caf50;
+}
+
+aside .grid-container {
+  padding: 1%;
+  margin: 20px;
+  display: flex;
+}
+aside .grid-container .col-1 {
+  width: 25%;
+  box-sizing: border-box;
+}
+aside .grid-container .col-2 {
+  width: 25%;
+  box-sizing: border-box;
+}
+aside .grid-container .col-3 {
+  width: 25%;
+  box-sizing: border-box;
+}
+aside .grid-container .col-4 {
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.grid-item {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInAnimation 2s ease-in-out forwards;
+  animation-delay: 3s;
+  visibility: hidden;
+  margin-top: 70px;
+  margin-left: 15px;
+}
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+.grid-item img {
+  border-radius: 25%;
+  border: 0px solid orange;
+  box-shadow: 5px 5px 10px 2px #333333;
+  max-width: 100%;
+  height: auto;
+}/*# sourceMappingURL=mainstyle.css.map */

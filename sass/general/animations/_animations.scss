@@ -1,0 +1,25 @@
+@mixin animation($duration: 1s, $scale: 2) {
+    transition: transform $duration;
+
+    &:hover {
+    transform: scale($scale);
+  }
+  }
+
+  @mixin fade-in($duration: 0.5s, $distance: 20px, $delay: 0s) {
+    opacity: 0;
+    transform: translateY($distance);
+    animation: fadeInAnimation $duration ease-in-out forwards;
+    animation-delay: $delay;
+    visibility: hidden;
+  
+    @keyframes fadeInAnimation {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+      }
+    }
+  }
+  
+  

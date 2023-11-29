@@ -1,0 +1,8 @@
+$fontPrimary: sans-serif;
+$fontSecondary: 'Times New Roman', Times, serif;
+
+@mixin h1Text{
+    font-size: 150%;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

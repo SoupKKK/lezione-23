@@ -1,0 +1,18 @@
+@mixin floating($rad: 25%, $bord: 0px) {
+    border-radius: $rad;
+    border: $bord solid orange;
+    box-shadow: 5px 5px 10px 2px #333333;
+  }
+
+  @mixin grid($numColonne) {
+    display: flex;
+
+    $larghezzaColonna: 100% / $numColonne;
+  
+    @for $i from 1 through $numColonne {
+      .col-#{$i} {
+        width: $larghezzaColonna;
+        box-sizing: border-box;
+      }
+    }
+  }
